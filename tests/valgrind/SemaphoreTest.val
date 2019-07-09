@@ -1,0 +1,17 @@
+==1948== Memcheck, a memory error detector
+==1948== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1948== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==1948== Command: ./bin/utest
+==1948== 
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+==1948== 
+==1948== HEAP SUMMARY:
+==1948==     in use at exit: 0 bytes in 0 blocks
+==1948==   total heap usage: 1,763 allocs, 1,763 frees, 326,172 bytes allocated
+==1948== 
+==1948== All heap blocks were freed -- no leaks are possible
+==1948== 
+==1948== For counts of detected and suppressed errors, rerun with: -v
+==1948== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

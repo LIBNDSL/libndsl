@@ -1,0 +1,53 @@
+/**
+ * @file config.h.in
+ * @brief
+ * configure c++
+ *
+ * @author niexw
+ * @email xiaowen.nie.cn@gmail.com
+ */
+#ifndef __NDSL_CONFIG_H__
+#define __NDSL_CONFIG_H__
+
+
+#define MAXLINE 16384
+#define SERV_PORT 9877
+#define RDMA_IP "127.0.0.1"
+#define SA struct sockaddr
+#define LISTENQ 1024
+#define MD5LENTH 16
+#define FILEPATHSIZE 64
+#define WAITTIMEOUT 5
+
+#define FILERECVROOT "./"
+
+#define TCP 0
+#define UDP 1
+#define RDMA 2
+
+#define SENDFILEFLAG 0
+#define RECVFILEFLAG 1
+#define SENDDATAFLAG 2
+#define RECVDATAFLAG 3
+
+// 是不是全部有用 ？ 
+#define SENDFILESUCC 4
+#define SENDFILEFAIL 5
+#define RECVFILESUCC 6
+#define RECVFILEFAIL 7
+#define SENDDATASUCC 8
+#define SENDDATAFAIL 9
+#define RECVDATASUCC 10
+#define RECVDATAFAIL 11
+#define OPPENDRECVSUCC 12
+#define OPPENDRECVFAIL 13
+#define OPPENDRECVRDMAFAIL 14
+#define SENDDATAONRDMA 15
+#define SENDDATAONUDP 16
+#define RECVRDMADATAFAIL 17
+#define RECVUDPDATAFAIL 18
+#define RECVDATAONRDMA 19
+#define RECVDATAONUDP 20
+
+#endif /* __NDSL_CONFIG_H__ */
+

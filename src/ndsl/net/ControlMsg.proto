@@ -1,0 +1,14 @@
+syntax = "proto3";
+package mnet;
+message ControlMsg{
+    // bool isDTP = 1;    // FIXME: 这个不确定加不加
+    int32 flag = 1;
+    int32 id = 2;
+    string ip = 3;
+    int32 dataPort = 4;
+    string checkSum = 5;
+    string fileName = 6;
+    int32 length = 7;
+	bytes dataId = 8;
+    uint32 crcCheckSum = 9;
+}

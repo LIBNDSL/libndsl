@@ -1,0 +1,176 @@
+==1438== Memcheck, a memory error detector
+==1438== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1438== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==1438== Command: ./bin/utest
+==1438== 
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+==1438== 
+==1438== HEAP SUMMARY:
+==1438==     in use at exit: 1,792 bytes in 11 blocks
+==1438==   total heap usage: 1,780 allocs, 1,769 frees, 329,332 bytes allocated
+==1438== 
+==1438== 4 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F2C29: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:58)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438==    by 0x2665BE: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1438==    by 0x279974: main (test.cc:16)
+==1438== 
+==1438== 12 bytes in 1 blocks are indirectly lost in loss record 2 of 11
+==1438==    at 0x4C2BBAF: malloc (vg_replace_malloc.c:299)
+==1438==    by 0x2F2DBF: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:63)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438==    by 0x2665BE: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1438==    by 0x279974: main (test.cc:16)
+==1438== 
+==1438== 64 bytes in 1 blocks are indirectly lost in loss record 3 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F7871: __gnu_cxx::new_allocator<ndsl::net::UdpEndpoint::SInfo**>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==1438==    by 0x2F7464: std::allocator_traits<std::allocator<ndsl::net::UdpEndpoint::SInfo**> >::allocate(std::allocator<ndsl::net::UdpEndpoint::SInfo**>&, unsigned long) (alloc_traits.h:436)
+==1438==    by 0x2F7174: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_allocate_map(unsigned long) (stl_deque.h:614)
+==1438==    by 0x2F6D90: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_initialize_map(unsigned long) (stl_deque.h:687)
+==1438==    by 0x2F6A3A: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_Deque_base() (stl_deque.h:490)
+==1438==    by 0x2F68E7: std::deque<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::deque() (stl_deque.h:884)
+==1438==    by 0x2F6019: ndsl::net::UdpEndpoint::UdpEndpoint(ndsl::net::EventLoop*) (UdpEndpoint.cc:32)
+==1438==    by 0x2F2991: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:47)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438== 
+==1438== 64 bytes in 1 blocks are indirectly lost in loss record 4 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F7871: __gnu_cxx::new_allocator<ndsl::net::UdpEndpoint::SInfo**>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==1438==    by 0x2F7464: std::allocator_traits<std::allocator<ndsl::net::UdpEndpoint::SInfo**> >::allocate(std::allocator<ndsl::net::UdpEndpoint::SInfo**>&, unsigned long) (alloc_traits.h:436)
+==1438==    by 0x2F7174: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_allocate_map(unsigned long) (stl_deque.h:614)
+==1438==    by 0x2F6D90: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_initialize_map(unsigned long) (stl_deque.h:687)
+==1438==    by 0x2F6A3A: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_Deque_base() (stl_deque.h:490)
+==1438==    by 0x2F68E7: std::deque<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::deque() (stl_deque.h:884)
+==1438==    by 0x2F6019: ndsl::net::UdpEndpoint::UdpEndpoint(ndsl::net::EventLoop*) (UdpEndpoint.cc:32)
+==1438==    by 0x2F56D0: ndsl::net::UdpClient::begin(ndsl::net::EventLoop*, ndsl::net::SocketAddress4) (UdpClient.cc:30)
+==1438==    by 0x2F2D0B: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:60)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438== 
+==1438== 72 bytes in 1 blocks are indirectly lost in loss record 5 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F6180: ndsl::net::UdpEndpoint::start(ndsl::net::SocketAddress4) (UdpEndpoint.cc:57)
+==1438==    by 0x2F2B5B: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:54)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438==    by 0x2665BE: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1438== 
+==1438== 72 bytes in 1 blocks are indirectly lost in loss record 6 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F6091: ndsl::net::UdpEndpoint::createChannel(int) (UdpEndpoint.cc:43)
+==1438==    by 0x2F56E8: ndsl::net::UdpClient::begin(ndsl::net::EventLoop*, ndsl::net::SocketAddress4) (UdpClient.cc:32)
+==1438==    by 0x2F2D0B: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:60)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438== 
+==1438== 80 bytes in 1 blocks are indirectly lost in loss record 7 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F63C7: ndsl::net::UdpEndpoint::onSend(void*, unsigned long, int, sockaddr*, unsigned int, void (*)(void*), void*) (UdpEndpoint.cc:113)
+==1438==    by 0x2F2E0F: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:67)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438==    by 0x2665BE: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1438== 
+==1438== 512 bytes in 1 blocks are indirectly lost in loss record 8 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F7AA3: __gnu_cxx::new_allocator<ndsl::net::UdpEndpoint::SInfo*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==1438==    by 0x2F782E: std::allocator_traits<std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::allocate(std::allocator<ndsl::net::UdpEndpoint::SInfo*>&, unsigned long) (alloc_traits.h:436)
+==1438==    by 0x2F741F: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_allocate_node() (stl_deque.h:600)
+==1438==    by 0x2F71BF: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_create_nodes(ndsl::net::UdpEndpoint::SInfo***, ndsl::net::UdpEndpoint::SInfo***) (stl_deque.h:725)
+==1438==    by 0x2F6DE9: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_initialize_map(unsigned long) (stl_deque.h:699)
+==1438==    by 0x2F6A3A: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_Deque_base() (stl_deque.h:490)
+==1438==    by 0x2F68E7: std::deque<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::deque() (stl_deque.h:884)
+==1438==    by 0x2F6019: ndsl::net::UdpEndpoint::UdpEndpoint(ndsl::net::EventLoop*) (UdpEndpoint.cc:32)
+==1438==    by 0x2F2991: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:47)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438== 
+==1438== 512 bytes in 1 blocks are indirectly lost in loss record 9 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F7AA3: __gnu_cxx::new_allocator<ndsl::net::UdpEndpoint::SInfo*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==1438==    by 0x2F782E: std::allocator_traits<std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::allocate(std::allocator<ndsl::net::UdpEndpoint::SInfo*>&, unsigned long) (alloc_traits.h:436)
+==1438==    by 0x2F741F: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_allocate_node() (stl_deque.h:600)
+==1438==    by 0x2F71BF: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_create_nodes(ndsl::net::UdpEndpoint::SInfo***, ndsl::net::UdpEndpoint::SInfo***) (stl_deque.h:725)
+==1438==    by 0x2F6DE9: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_M_initialize_map(unsigned long) (stl_deque.h:699)
+==1438==    by 0x2F6A3A: std::_Deque_base<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::_Deque_base() (stl_deque.h:490)
+==1438==    by 0x2F68E7: std::deque<ndsl::net::UdpEndpoint::SInfo*, std::allocator<ndsl::net::UdpEndpoint::SInfo*> >::deque() (stl_deque.h:884)
+==1438==    by 0x2F6019: ndsl::net::UdpEndpoint::UdpEndpoint(ndsl::net::EventLoop*) (UdpEndpoint.cc:32)
+==1438==    by 0x2F56D0: ndsl::net::UdpClient::begin(ndsl::net::EventLoop*, ndsl::net::SocketAddress4) (UdpClient.cc:30)
+==1438==    by 0x2F2D0B: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:60)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438== 
+==1438== 848 (200 direct, 648 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F56BE: ndsl::net::UdpClient::begin(ndsl::net::EventLoop*, ndsl::net::SocketAddress4) (UdpClient.cc:30)
+==1438==    by 0x2F2D0B: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:60)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438==    by 0x2665BE: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1438== 
+==1438== 940 (200 direct, 740 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1438==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1438==    by 0x2F297C: ____C_A_T_C_H____T_E_S_T____0() (UdpEndpointTest.cc:47)
+==1438==    by 0x269AA5: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1438==    by 0x269208: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1438==    by 0x2642E0: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1438==    by 0x26403A: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1438==    by 0x262D3C: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1438==    by 0x265602: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1438==    by 0x266849: Catch::Session::runInternal() (catch.hpp:9592)
+==1438==    by 0x26661E: Catch::Session::run() (catch.hpp:9549)
+==1438==    by 0x2665BE: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1438==    by 0x279974: main (test.cc:16)
+==1438== 
+==1438== LEAK SUMMARY:
+==1438==    definitely lost: 404 bytes in 3 blocks
+==1438==    indirectly lost: 1,388 bytes in 8 blocks
+==1438==      possibly lost: 0 bytes in 0 blocks
+==1438==    still reachable: 0 bytes in 0 blocks
+==1438==         suppressed: 0 bytes in 0 blocks
+==1438== 
+==1438== For counts of detected and suppressed errors, rerun with: -v
+==1438== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

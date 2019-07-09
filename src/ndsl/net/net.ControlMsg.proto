@@ -1,0 +1,12 @@
+package net;
+message ControlMsg{
+    optional bool isAck = 0;
+    optional bool isDTP = 1;    // FIXME: 这个不确定加不加
+    optional int32 flag = 2;
+    optional int32 id = 3;
+    optional string ip = 4;
+    optional int dataPort = 5;
+    optional string checkSum = 6;
+    optional string fileName = 7;
+    optional int length = 8;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package Protbload;
+message ADD
+{
+    int32 agv1=1;
+    int32 agv2=2;
+}
+
+message RESULT
+{
+    int32 answer=1;
+    bool exflag=2 ;
+}
+
+

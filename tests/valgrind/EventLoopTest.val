@@ -1,0 +1,36 @@
+==1133== Memcheck, a memory error detector
+==1133== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1133== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==1133== Command: ./bin/utest
+==1133== 
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+
+==1133== 
+==1133== HEAP SUMMARY:
+==1133==     in use at exit: 16 bytes in 1 blocks
+==1133==   total heap usage: 1,822 allocs, 1,821 frees, 328,151 bytes allocated
+==1133== 
+==1133== 16 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1133==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==1133==    by 0x2EEBB3: ____C_A_T_C_H____T_E_S_T____0() (EventLoopTest.cc:47)
+==1133==    by 0x265745: Catch::TestInvokerAsFunction::invoke() const (catch.hpp:10331)
+==1133==    by 0x264EA8: Catch::TestCase::invoke() const (catch.hpp:10232)
+==1133==    by 0x25FF80: Catch::RunContext::invokeActiveTestCase() (catch.hpp:9104)
+==1133==    by 0x25FCDA: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (catch.hpp:9078)
+==1133==    by 0x25E9DC: Catch::RunContext::runTest(Catch::TestCase const&) (catch.hpp:8861)
+==1133==    by 0x2612A2: Catch::(anonymous namespace)::runTests(std::shared_ptr<Catch::Config> const&) (catch.hpp:9394)
+==1133==    by 0x2624E9: Catch::Session::runInternal() (catch.hpp:9592)
+==1133==    by 0x2622BE: Catch::Session::run() (catch.hpp:9549)
+==1133==    by 0x26225E: Catch::Session::run(int, char**) (catch.hpp:9517)
+==1133==    by 0x275614: main (test.cc:16)
+==1133== 
+==1133== LEAK SUMMARY:
+==1133==    definitely lost: 16 bytes in 1 blocks
+==1133==    indirectly lost: 0 bytes in 0 blocks
+==1133==      possibly lost: 0 bytes in 0 blocks
+==1133==    still reachable: 0 bytes in 0 blocks
+==1133==         suppressed: 0 bytes in 0 blocks
+==1133== 
+==1133== For counts of detected and suppressed errors, rerun with: -v
+==1133== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
